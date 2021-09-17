@@ -425,6 +425,21 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
         case .webinarDePromote:
             message = ["MEETING_STATUS_WEBINAR_DEPROMOTE", "Demote the attendees from the panelist"]
             break
+        case .ended:
+            message = ["MEETING_STATUS_ENDED", "Ended the meeting"]
+            break
+        case .waitingForHost:
+            message = ["MEETING_STATUS_WAITING_FOR_HOST", "Watiting for meeting host"]
+            break
+        case .disconnecting:
+            message = ["MEETING_STATUS_DISCONNECTING", "Disconnecting from meeting"]
+            break
+        case .reconnecting:
+            message = ["MEETING_STATUS_RECONNECTING", "Reconnecting to meeting"]
+            break
+        case .inWaitingRoom:
+            message = ["MEETING_STATUS_IN_WAITING_ROOM", "In Waiting Room"]
+            break
         default:
             message = ["MEETING_STATUS_UNKNOWN", "Unknown error"]
         }
