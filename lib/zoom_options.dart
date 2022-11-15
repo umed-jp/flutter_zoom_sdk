@@ -98,6 +98,7 @@ class ZoomOptions {
       {required this.domain,
       this.appKey,
       this.appSecret,
+      this.jwtToken,
       this.language = "en-US",
       this.showMeetingHeader = true,
       this.disableInvite = false,
