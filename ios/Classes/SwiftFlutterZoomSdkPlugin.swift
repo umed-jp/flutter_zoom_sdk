@@ -75,6 +75,9 @@ public class SwiftFlutterZoomSdkPlugin: NSObject, FlutterPlugin,FlutterStreamHan
 
             let auth = MobileRTC.shared().getAuthService()
             auth?.delegate = self.authenticationDelegate.onAuth(result)
+            if let jwtToken = arguments["jwtToken"] {
+                auth?.jwtToken = jwtToken
+            }
             if let appKey = arguments["appKey"] {
                 auth?.clientKey = appKey
             }
