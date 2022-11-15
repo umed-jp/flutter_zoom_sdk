@@ -14,6 +14,9 @@ class ZoomView extends ZoomPlatform {
   Future<List> initZoom(ZoomOptions options) async {
     var optionMap = <String, String?>{};
 
+    if (options.jwtToken != null) {
+      optionMap.putIfAbsent("jwtToken", () => options.jwtToken!);
+    }
     if (options.appKey != null) {
       optionMap.putIfAbsent("appKey", () => options.appKey!);
     }

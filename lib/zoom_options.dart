@@ -8,6 +8,9 @@ class ZoomOptions {
   /// --JWT key for web / SDK key for iOS / Android
   String? appSecret;
 
+  /// --JWT key for web
+  String? jwtToken;
+
   /// --JWT secret for web / SDK secret for iOS / Android
   String? language;
 
